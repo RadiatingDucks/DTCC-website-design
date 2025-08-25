@@ -28,7 +28,7 @@ body {
 h1 {
     font-family: "Barlow";
     font-size: 100px;
-    color: hotpink;
+    color:rgb(108, 183, 211);
 }
 
 .sec1 {
@@ -50,9 +50,11 @@ h1 {
     align-content: center;
     border-top-left-radius: 80px;
     border-top-right-radius: 80px;
+    margin-bottom: 30px;
 }
 
 .sec1text {
+    font-family: "Barlow";
     position: absolute;
     top: 5%;
     right: 2%;
@@ -79,7 +81,7 @@ nav{
     backdrop-filter: blur(7px);
     padding: 20px;
     border-radius: 15px;
-    text-align: right;
+    text-align: center;
     
 }
 
@@ -87,4 +89,21 @@ a{
     padding: 30px;
     color: rgb(0, 56, 77);
     text-decoration: none;
+    font-family: "Barlow";
+}
+
+.sec2 {
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+    margin-left: -10px;
+    margin-right: -10px;
+    height:fit-content;
+    position: relative;
+    overflow: hidden;
+    font-family: "Barlow";
+}
+
+.sec2Img {
+    width: 50%;
+    margin: 20px;
 }
