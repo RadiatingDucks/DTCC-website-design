@@ -17,7 +17,7 @@ body {
     margin-top: -1vw;
     margin-bottom: -1vw;
     background-image: url("heroImg2.png");
-    background-size: cover;
+    background-size: 100%;
     padding-bottom: 10%;
     padding-top: 8%;
     text-align: center;
@@ -46,8 +46,6 @@ h1 {
     background-color: rgb(0, 56, 77);
     padding: 5vw;
     margin-top: -6vw;
-    margin-left: -10px;
-    margin-right: -10px;
     height:fit-content;
     position: relative;
     overflow: hidden;
@@ -72,7 +70,7 @@ h1 {
     text-align: right;
     z-index: 2;
     padding-top: 100px;
-    padding-bottom: 41vw;
+    padding-bottom: 30vw;
     padding-left: 550px;
     padding-right: 120px;
     background-image: linear-gradient(to right,rgba(255, 255, 255, 0), rgba(0, 56, 77, 0.5), rgb(0, 56, 77));
@@ -107,10 +105,39 @@ a{
     border-top-left-radius: 80px;
     border-top-right-radius: 80px;
     background-color: rgb(255, 255, 255);
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 130px;
+    margin-top: -5vw;
+    position: relative;
+    overflow: hidden;
+    font-family: "Barlow";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.sec2Img, .sec2text {
+    flex: 1; 
+    padding: 20px;
+}
+
+
+.sec2Img img {
+    width: 100%;
+    height: auto;
+    display: block; /* removes weird gaps */
+    border-radius: 50px;
+}
+
+.sec3 {
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    background-color: rgb(18, 99, 129);
     padding: 50px;
-    margin-top: -4vw;
-    margin-left: -10px;
-    margin-right: -10px;
+    margin-top: -6vw;
     position: relative;
     overflow: hidden;
     font-family: "Barlow";
@@ -118,15 +145,3 @@ a{
     align-items: center;
     justify-content: center;
 }
-
-.sec2Img, .sec2text {
-    flex: 1; 
-    padding: 20px;
-    height: 10vw;
-}
-
-.sec2Img {
-    width: 100%;
-    height: auto;
-}
-
