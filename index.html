@@ -10,10 +10,10 @@
         <section class="front">
             <div class="navigation">
                     <nav>
-                        <a href="#"><span class="fa fa-leaf"></span> About the club</a>
-                        <a href="#"><span class="fa fa-map-marker-alt"></span> Where and when</a>
-                        <a href="#"><span class="fa fa-wrench"></span> Our projects</a>
-                        <a href="#"><span class="fa fa-newspaper"></span> Contact us</a>
+                        <a href="#about">About the club</a>
+                        <a href="#why">When, where, why?</a>
+                        <a href="#projects">Our projects</a>
+                        <a href="#contact">Contact us</a>
                     </nav>
             </div>
             <div class ="clubtitle">
@@ -21,24 +21,29 @@
             </div>            
         </section>
 
-        <section class="sec1">
+        <section id="about" class="sec1">
             <img src="design_club_group_photo.jpg" class="sec1Img">
             <div  class="sec1text">
                 <h2>About this club</h2>
                 <p>yayayayayyayayayayayayyayayayayayayyaya</p>
             </div>
         </section>
-
-        <section class="sec2">
+        
+        <marquee>Your scrolling text goes here.</marquee>
+        <section id ="why" class="sec2">
             <div class = "sec2text">
-                <h2>Why</h2>
-                <p>yayayayayyayayayayayayyayayayayayayyaya</p>
+                <h2>When, where, why?</h2>
+                <p>
+                    Design and Technology Club is hosted at in <span>Pukehinau 10, every Tuesday Lunchtime</span>. Bring your friends, bring your Lunch, bring your cat :D
+                    <br><br><span><a href="https://forms.gle/ZLxxuGNuE36PXVcR9">Click here for the Club Registration form</a></span>
+                    <br><br><span><a href="  https://forms.gle/xEVUx7HX7Ti25QHP9">Teams form (do cool projects with other humans)</a></span>
+                </p>
             </div>
             <div class="sec2Img">
                 <img src="Screenshot 2025-09-12 091148.png" alt="a photo of wind turbine blades">
             </div>
         </section>
-        <section class="sec3">
+        <section id ="projects" class="sec3">
             <div class="sec3text">
                 <h2>Our Projects</h2>
             </div>
@@ -47,23 +52,20 @@
                 <div class="card">
                     <img src="Screenshot 2025-09-17 213032.png" alt="Project 1">
                     <p>Wind Turbine Blades</p>
-                    <a href="https://example.com" class="coollink">Check ></a>
                 </div>
 
                 <div class="card">
                     <img src="Screenshot 2025-09-17 213112.png" alt="Project 2">
                     <p>Trolley Handles</p>
-                    <a href="https://example.com" class="coollink">Check ></a>
                 </div>
 
                 <div class="card">
                     <img src="Screenshot 2025-09-17 213129.png" alt="Project 3">
                     <p>Homepod Mini Cable Organizer</p>
-                    <a href="https://example.com" class="coollink">Check ></a>
                 </div>
             </div>
         </section>
-        <section class="sec4">
+        <section id ="contact" class="sec4">
             <div class="sec4text">
                 <h2>Contact Us</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -73,6 +75,42 @@
             </div>
             </div>
         </section>
+        <footer class="sec5">
+            <div>
+                <img src="Burnside Logo - Secondary Horizontal stacked - black RGB.jpg" alt="BHS logo">
+            </div>
+            <div>
+                <a href="https://www.burnside.school.nz/">Burnside High School</a>
+                <p>© 2025 Design&Technology Club</p>
+            </div>
+        </footer>
+
+        <script>
+            $(document).ready(function(){
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
+            
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+                } // End if
+            });
+            });
+        </script>
     </body>
 
 </html>
