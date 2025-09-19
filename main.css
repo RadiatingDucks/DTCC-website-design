@@ -1,67 +1,75 @@
-@import url(https://fonts.googleapis.com/css?family=Barlow);
+@import url(https://fonts.googleapis.com/css?family=Barlow); /* Import Google Font */
 
+/*Commented by ChatGPT*/
+
+/* Reset defaults */
 html, body{
-    margin: 0;
-    padding: 0;
-    width: 100%;
+    margin: 0; /* remove default browser margin */
+    padding: 0; /* remove default browser padding */
+    width: 100%; /* full width */
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* enables smooth scrolling for anchor links */
 }
 
 body {
-    background-color:  rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0); /* set background to black */
 }
 
+/* ===== HERO SECTION ===== */
 .front {
     display: block;
     width: 100%;
-    height:fit-content;
-    margin-top: -1vw;
-    margin-bottom: -1vw;
-    background-image: url("heroImg2.png");
-    background-size: 100%;
-    padding-bottom: 10%;
-    padding-top: 8%;
-    text-align: center;
-
+    height: fit-content; /* auto height based on content */
+    margin-top: -1vw; /* pulls section upward */
+    margin-bottom: -1vw; /* pulls section downward */
+    background-image: url("heroImg2.png"); /* hero background image */
+    background-size: 100%; /* stretches image (use cover for responsiveness) */
+    padding-bottom: 10%; /* space at bottom */
+    padding-top: 8%; /* space at top */
+    text-align: center; /* center-align text */
 }
 
 .clubtitle{
-    position: sticky;
-    overflow: hidden;
+    position: sticky; /* sticks relative to parent (needs top to work) */
+    overflow: hidden; /* hides overflow content */
 }
 
 h1 {
-    font-family: "Barlow";
-    font-size: 8vw;
-    color:rgb(255, 255, 255);
-    /*background: linear-gradient(to bottom, rgb(0, 56, 77),rgb(108, 183, 211) ); 
-    background-clip: text; 
+    font-family: "Barlow"; /* heading font */
+    font-size: 8vw; /* responsive font size */
+    color: rgb(255, 255, 255); /* white text */
+    /* Gradient text option below (commented out) */
+    /*background: linear-gradient(to bottom, rgb(0, 56, 77),rgb(108, 183, 211));
+    background-clip: text;
     color: transparent;*/
 }
 
 h2{
     font-family: "Barlow";
-    font-size: 2vw;
+    font-size: 4vw; /* smaller heading size */
 }
 
+.sec1 p{
+  font-size: 30px;
+}
+
+/* ===== ABOUT SECTION ===== */
 .sec1 {
-    border-top-left-radius: 80px;
-    border-top-right-radius: 80px;
-    background-color: rgb(0, 56, 77);
-    padding: 5vw;
-    margin-top: -6vw;
-    height:fit-content;
-    position: relative;
-    overflow: hidden;
+    border-top-left-radius: 80px; /* round top left corner */
+    border-top-right-radius: 80px; /* round top right corner */
+    background-color: rgb(0, 56, 77); /* dark teal bg */
+    padding: 5vw; /* section padding */
+    margin-top: -6vw; /* overlaps previous section */
+    height: fit-content;
+    position: relative; /* allows absolute children */
+    overflow: hidden; /* prevent content overflow */
 }
 
 .sec1Img {
-
-    width: 100%;
-    align-content: center;
+    width: 100%; /* full width */
+    align-content: center; /* center align (not very effective on img) */
     border-top-left-radius: 80px;
     border-top-right-radius: 80px;
     margin-bottom: 30px;
@@ -70,57 +78,61 @@ h2{
 
 .sec1text {
     font-family: "Barlow";
-    position: absolute;
-    top: 5%;
-    right: 2%;
-    color: white;
-    text-align: right;
-    z-index: 2;
+    position: absolute; /* overlays text */
+    top: 5%; /* position from top */
+    right: 2%; /* position from right */
+    color: white; /* white text */
+    text-align: right; /* align text to right */
+    z-index: 2; /* above background */
     padding-top: 100px;
-    padding-bottom: 30vw;
-    padding-left: 550px;
+    padding-bottom: 10vw;
+    padding-left: 550px; /* ⚠ not responsive */
     padding-right: 120px;
-    background-image: linear-gradient(to right,rgba(255, 255, 255, 0), rgba(0, 56, 77, 0.5), rgb(0, 56, 77));
+    background-image: linear-gradient(to right,
+        rgba(255, 255, 255, 0),
+        rgba(0, 56, 77, 0.5),
+        rgb(0, 56, 77)); /* gradient overlay */
     border-radius: 20px;
 }
 
+/* ===== NAVIGATION ===== */
 .navigation{
-    top: 0.8vw;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
+    top: 0.8vw; /* offset from top */
+    position: fixed; /* fixed nav bar */
+    width: 100%; /* span full width */
+    z-index: 1000; /* stay above content */
 }
 
 nav{
-    background-color: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(7px);
-    padding: 1.7vw;
-    border-radius: 1.5vw;
-    text-align: center;
-    position: sticky;
-    
+    background-color: rgba(255, 255, 255, 0.7); /* semi-transparent bg */
+    backdrop-filter: blur(7px); /* blurred background effect */
+    padding: 1.7vw; /* nav padding */
+    border-radius: 1.5vw; /* rounded corners */
+    text-align: center; /* center nav items */
+    position: sticky; /* sticks inside parent (not needed here) */
 }
 
 nav a{
-    padding: 3vw;
-    color: rgb(0, 56, 77);
-    text-decoration: none;
+    padding: 3vw; /* spacing around links */
+    color: rgb(0, 56, 77); /* dark teal text */
+    text-decoration: none; /* remove underline */
     font-family: "Barlow";
 }
 
 .sec2 a{
-  color: rgb(18, 99, 129);
+  color: rgb(18, 99, 129); /* custom link color inside sec2 */
 }
 
 span{
-  font-weight: bold;
-  color: rgb(108, 183, 211);
+  font-weight: bold; /* make spans bold */
+  color: rgb(108, 183, 211); /* light teal */
 }
 
+/* ===== WHEN/WHERE/WHY SECTION ===== */
 .sec2 {
     border-top-left-radius: 80px;
     border-top-right-radius: 80px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255); /* white bg */
     padding-top: 50px;
     padding-left: 50px;
     padding-right: 50px;
@@ -129,35 +141,33 @@ span{
     position: relative;
     overflow: hidden;
     font-family: "Barlow";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+    display: flex; /* side by side layout */
+    align-items: center; /* vertical alignment */
+    justify-content: center; /* center content */
 }
 
 .sec2Img, .sec2text {
-    flex: 1; 
+    flex: 1;  /* equal width */
     padding: 20px;
 }
 
-
 .sec2Img img {
-    width: 100%;
+    width: 100%; /* responsive */
     height: auto;
-    display: block; /* removes weird gaps */
+    display: block; /* remove gaps */
     border-radius: 50px;
 }
 
+/* ===== PROJECTS SECTION ===== */
 .sec3 {
   border-radius: 80px;
-  background-color: rgb(18, 99, 129);
+  background-color: rgb(18, 99, 129); /* blue bg */
   padding: 50px;
   margin-top: -6vw;
   padding-bottom: 7vw;
   position: relative;
   font-family: "Barlow";
   text-align: center;
- 
 }
 
 .sec3text h2 {
@@ -168,8 +178,8 @@ span{
 .card-container {
   display: flex;
   justify-content: center;
-  gap: 40px; /* space between cards */
-  flex-wrap: wrap; /* makes it responsive */
+  gap: 40px; /* spacing between cards */
+  flex-wrap: wrap; /* makes responsive */
 }
 
 .card {
@@ -177,8 +187,8 @@ span{
   border-radius: 20px;
   padding: 20px;
   width: 250px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* hover animation */
 }
 
 .card img {
@@ -193,60 +203,55 @@ span{
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transform: translateY(-10px); /* move up on hover */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25); /* stronger shadow */
 }
 
-
+/* ===== CONTACT SECTION ===== */
 .sec4 {
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 130px;
+    padding: 50px;
+    padding-bottom: 100px;
     position: relative;
     overflow: hidden;
     font-family: "Barlow";
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0), rgba(0, 56, 77), rgb(108, 183, 211));
-    
+    background-image: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 56, 77),
+        rgb(108, 183, 211)); /* gradient bg */
 }
 
 .sec4text h2 {
   color: white;
   font-size: 64px;
   margin-bottom: 40px;
-
 }
 
 .sec4text {
   color: white;
-
 }
 
 .sec4Img, .sec4text {
-    flex: 1; 
+    flex: 1; /* split space evenly */
     padding: 20px;
 }
-
 
 .sec4Img img {
     padding: 20px;
     width: 100%;
     height: auto;
-    display: block; /* removes weird gaps */
+    display: block;
     border-radius: 50px;
 }
 
+/* ===== FOOTER ===== */
 .sec5 {
     border-top-left-radius: 80px;
     border-top-right-radius: 80px;
     background-color: rgb(255, 255, 255);
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 50px;
+    padding: 50px;
     margin-top: -5vw;
     position: relative;
     overflow: hidden;
@@ -254,14 +259,13 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 footer {
-  display: flex;              /* arrange in a row */
-  justify-content: space-between;  /* space evenly */
-  gap: 40px;                  /* spacing between sections */
-  flex-wrap: wrap;            /* makes it responsive */
+  display: flex;
+  justify-content: space-between; /* spread out */
+  gap: 40px;
+  flex-wrap: wrap; /* stack on small screens */
 }
 
 footer a{
@@ -270,10 +274,10 @@ footer a{
 }
 
 footer img{
-  width: 20vw;
+  width: 20vw; /* responsive logo size */
 }
 
 footer div {
-    flex: 1; 
+    flex: 1;
     padding: 20px;
 }
